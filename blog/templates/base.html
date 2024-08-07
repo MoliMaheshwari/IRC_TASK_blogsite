@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Blog Site{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'blog/css/styles.css' %}">
+    <script src="{% static 'blog/js/theme.js' %}" defer></script>
+</head>
+<body>
+    <header>
+        <h1>My Blog Site</h1>
+        <button id="theme-toggle">Toggle Theme</button>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

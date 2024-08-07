@@ -1,0 +1,13 @@
+body {
+    background-color: white;
+    color: black;
+}
+
+.dark-theme {
+    background-color: black;
+    color: white;
+}
+
+#theme-toggle {
+    cursor: pointer;
+}

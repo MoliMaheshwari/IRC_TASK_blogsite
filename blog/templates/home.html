@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Blog Home{% endblock %}
+
+{% block content %}
+    <a href="{% url 'create_blog' %}">Create Blog</a>
+    <div>
+        {% for blog in blogs %}
+            <div>
+                <h2><a href="{% url 'detail' blog.id %}">{{ blog.title }}</a></h2>
+                {% if blog.image %}
+                    <img src="{{ blog.image.url }}" alt="{{ blog.title }}">
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
